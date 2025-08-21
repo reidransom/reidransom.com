@@ -24,12 +24,32 @@ $asset_url: '{{ '/assets' | absolute_url }}';
   display: none;
 }
 
+.home {
+  max-width: 40rem;
+}
+
+.content-p {
+  margin: auto;
+  font-size: 1.5rem;
+}
+.content-p, .post-date, .post-link {
+  color: inherit;
+}
+
+a, a.post-link {
+  text-decoration: underline;
+  color: inherit;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  &:hover {
+    color: white;
+  }
+}
+
 .site-navigation {
   margin-top: 0;
   padding-top: 2rem;
-  a {
-    color: white;
-  }
+  padding-left: 0;
+  padding-right: 0;
   img {
     margin-top: 0;
     margin-bottom: 0;
@@ -51,6 +71,7 @@ $asset_url: '{{ '/assets' | absolute_url }}';
     width: 100%; /* Ensure the <a> fills the <li> */
     display: flex; /* Make <a> a flex container to handle text and image */
     align-items: center; /* Vertically center text or image inside <a> */
+    justify-content: center; /* Horizontally center text or image inside <a> */
   }
   .menu-logo {
     height: 3rem; /* Adjust logo size to fit within li */
@@ -70,8 +91,7 @@ $asset_url: '{{ '/assets' | absolute_url }}';
 
 body {
   background-color: #000000;
-  color: white;
-  padding-bottom: 5rem;
+  color: #bbb;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -112,9 +132,7 @@ body {
 .cover-content {
   position: relative; /* Ensures content is above video */
   z-index: 1; /* Above video */
-  color: white; /* Adjust for visibility */
   text-align: center;
-  padding: 20px;
   height: 100vh;
 }
 
@@ -122,9 +140,5 @@ body {
   width: 100%;
   position: absolute;
   bottom: 0;
-}
-
-.post-link {
-  color: white;
-  background-color: $brand-color;
+  padding-bottom: 3rem;
 }

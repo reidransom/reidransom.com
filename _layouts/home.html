@@ -13,74 +13,75 @@ layout: default
 </video>
 
 <div class="cover-content">
-  <div class="flex-container">
 
-    <div class="flex-item">
-      <header class="site-masthead">
-        <h1>
-          I'm Reid Ransom —
-        </h1>
-        <h2>
-          a full-stack engineer, founder of r2ware, and technology leader with experience building
-          and scaling products for global companies and mission-driven organizations. I’ve led
-          engineering at Premiere Digital Services and Defy Ventures, and my work has been recognized
-          by Inc., Nokia, Wired, and Mark Zuckerberg. Beyond work, I’m a husband and father, a Boston
-          Marathon finisher, and proudly sober since 2022.
-        </h2>
-      </header>
-    </div>
+  <header class="home">
+    <h1 class="content-title divided">
+      About
+    </h1>
+    <h2 class="content-p">
+      I’m Reid Ransom — a full-stack engineer, founder of
+      <a href="https://r2ware.dev/">r2ware</a>, and technology
+      leader with experience building and scaling products for global companies
+      and mission-driven organizations. I’ve led engineering at
+      <a href="https://www.premieredigital.com/">Premiere Digital</a> and
+      <a href="https://defyventures.org/">Defy Ventures</a>, and my work has
+      been recognized by <a href="https://www.inc.com/profile/defy-ventures">Inc.</a>,
+      <a href="https://web.archive.org/web/20240511154137/https://www.wired.com/brandlab/2015/10/transforming-the-incarcerated-into-entrepreneurs/">
+      Nokia+Wired</a>, and
+      <a href="https://www.facebook.com/watch/?v=10103671105741461">Mark Zuckerberg</a>.
+      Beyond work, I’m a husband and father, a
+      <a href="https://results.baa.org/2025/?content=detail&idp=9TGHS6FF1AAE6B">Boston
+      Marathon finisher</a>, and proudly sober since 2022.
+    </h2>
+  </header>
 
-    <div class="flex-item">
-      <main class="home" id="main" role="main" aria-label="Content">
+  <main class="home" id="main" role="main" aria-label="Content">
 
-        <h1 class="content-title divided">
-          {% if site.paginate and site.paginate_path and paginator.page > 1 %}
-            Page {{ paginator.page }}
+    <h1 class="content-title divided">
+      {% if site.paginate and site.paginate_path and paginator.page > 1 %}
+        Page {{ paginator.page }}
+      {% else %}
+        Latest posts
+      {% endif %}
+    </h1>
+
+    {% if site.paginate and site.paginate_path %}
+
+      <ul class="post-list">
+        {% for post in paginator.posts %}
+          {% include post-list-item.html %}
+        {% endfor %}
+      </ul>
+
+      {% if paginator.total_pages > 1 %}
+
+        <div class="post-pagination">
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl  }}" class="pagination-next btn">&lang;&nbsp;Older</a>
           {% else %}
-            Contents
+            <span>&nbsp;</span>
           {% endif %}
-        </h1>
-
-        {% if site.paginate and site.paginate_path %}
-
-          <ul class="post-list">
-            {% for post in paginator.posts %}
-              {% include post-list-item.html %}
-            {% endfor %}
-          </ul>
-
-          {% if paginator.total_pages > 1 %}
-
-            <div class="post-pagination">
-              {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path | prepend: site.baseurl  }}" class="pagination-next btn">&lang;&nbsp;Older</a>
-              {% else %}
-                <span>&nbsp;</span>
-              {% endif %}
-              <span class="pagination-number">{{ paginator.page }} of {{ paginator.total_pages }}</span>
-              {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-previous btn">Newer&nbsp;&rang;</a>
-              {% else %}
-                <span>&nbsp;</span>
-              {% endif %}
-            </div>
-
+          <span class="pagination-number">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-previous btn">Newer&nbsp;&rang;</a>
+          {% else %}
+            <span>&nbsp;</span>
           {% endif %}
+        </div>
 
-        {% else %}
+      {% endif %}
 
-          <ul class="post-list">
-            {% for post in site.posts %}
-              {% include post-list-item.html %}
-            {% endfor %}
-          </ul>
+    {% else %}
 
-        {% endif %}
+      <ul class="post-list">
+        {% for post in site.posts %}
+          {% include post-list-item.html %}
+        {% endfor %}
+      </ul>
 
-      </main>
-    </div>
+    {% endif %}
 
-  </div>
+  </main>
 
   <div class="footer-nav">
     {% include menu.html %}
