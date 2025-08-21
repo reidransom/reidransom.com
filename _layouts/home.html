@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+<div class="cover-image">
+  {% include menu.html %}
+</div>
+
+
+<video autoplay muted loop class="cover-video">
+  <source src="https://nyc3.digitaloceanspaces.com/r2ware-public-html/reidransom/design/9665235-hd_1920_1080_30fps.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="cover-content">
+  <div class="flex-container">
+
+    <div class="flex-item">
+      <header class="site-masthead">
+        <h1>
+          I'm Reid Ransom —
+        </h1>
+        <h2>
+          a full-stack engineer, founder of r2ware, and technology leader with experience building
+          and scaling products for global companies and mission-driven organizations. I’ve led
+          engineering at Premiere Digital Services and Defy Ventures, and my work has been recognized
+          by Inc., Nokia, Wired, and Mark Zuckerberg. Beyond work, I’m a husband and father, a Boston
+          Marathon finisher, and proudly sober since 2022.
+        </h2>
+      </header>
+    </div>
+
+    <div class="flex-item">
+      <main class="home" id="main" role="main" aria-label="Content">
+
+        <h1 class="content-title divided">
+          {% if site.paginate and site.paginate_path and paginator.page > 1 %}
+            Page {{ paginator.page }}
+          {% else %}
+            Contents
+          {% endif %}
+        </h1>
+
+        {% if site.paginate and site.paginate_path %}
+
+          <ul class="post-list">
+            {% for post in paginator.posts %}
+              {% include post-list-item.html %}
+            {% endfor %}
+          </ul>
+
+          {% if paginator.total_pages > 1 %}
+
+            <div class="post-pagination">
+              {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl  }}" class="pagination-next btn">&lang;&nbsp;Older</a>
+              {% else %}
+                <span>&nbsp;</span>
+              {% endif %}
+              <span class="pagination-number">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+              {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-previous btn">Newer&nbsp;&rang;</a>
+              {% else %}
+                <span>&nbsp;</span>
+              {% endif %}
+            </div>
+
+          {% endif %}
+
+        {% else %}
+
+          <ul class="post-list">
+            {% for post in site.posts %}
+              {% include post-list-item.html %}
+            {% endfor %}
+          </ul>
+
+        {% endif %}
+
+      </main>
+    </div>
+
+  </div>
+
+  <div class="footer-nav">
+    {% include menu.html %}
+  </div>
+</div>
+
+<script>
+  document.body.style.backgroundImage = "url('/assets/img/purple-haze.png')"
+</script>

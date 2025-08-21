@@ -1,0 +1,19 @@
+items:
+
+  - title: About
+    url: /about.html
+
+  - title: Blog
+    url: /blog.html
+
+  - title: r2ware
+    url: https://r2ware.dev/
+
+  - title: GitHub
+    url: https://github.com/reidransom
+
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/reidransom/
+
+  - title: Instagram
+    url: https://www.instagram.com/reidransom/

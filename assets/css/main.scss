@@ -1,0 +1,130 @@
+---
+---
+
+@charset "utf-8";
+
+$asset_url: '{{ '/assets' | absolute_url }}';
+
+@import
+  "reset",
+  "variables",
+  "syntax-highlighting",
+  "mixins",
+  "font",
+  "base",
+  "masthead",
+  "menu",
+  "post-list",
+  "article",
+  "footnotes",
+  "search"
+;
+
+.skip-navigation {
+  display: none;
+}
+
+.site-navigation {
+  margin-top: 0;
+  padding-top: 2rem;
+  a {
+    color: white;
+  }
+  img {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+  }
+  li {
+    display: flex; /* Make li a flex container */
+    align-items: center; /* Vertically center contents */
+    height: 50px; /* Set a consistent height for all li elements */
+    width: 10rem;
+    text-align: center;
+  }
+  a {
+    text-decoration: none; /* Optional: Remove underline from links */
+    width: 100%; /* Ensure the <a> fills the <li> */
+    display: flex; /* Make <a> a flex container to handle text and image */
+    align-items: center; /* Vertically center text or image inside <a> */
+  }
+  .menu-logo {
+    height: 3rem; /* Adjust logo size to fit within li */
+    width: auto; /* Maintain aspect ratio */
+  }
+
+}
+
+.cover-image {
+  height: 100vh;
+  background-image: url(/assets/img/look-back-IMG_1974.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+body {
+  background-color: #000000;
+  color: white;
+  padding-bottom: 5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+.flex-item {
+  flex: 1 1 calc(50% - 20px); /* Two columns, accounting for gap */
+  padding: 15px;
+  text-align: center;
+  box-sizing: border-box; /* Prevent padding from affecting width */
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .flex-item {
+    flex: 1 1 100%; /* Single column, full width */
+  }
+}
+
+.cover-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
+.cover-content {
+  position: relative; /* Ensures content is above video */
+  z-index: 1; /* Above video */
+  color: white; /* Adjust for visibility */
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.footer-nav {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.post-link {
+  color: white;
+  background-color: $brand-color;
+}
