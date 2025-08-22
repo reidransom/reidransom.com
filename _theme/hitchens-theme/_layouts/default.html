@@ -18,8 +18,10 @@
       {%- include google-analytics.html -%}
     {%- endif -%}
 
+    {% include head_append.html %}
+
   </head>
-  <body>
+  <body class="{{ page.body_class }}">
 
     {% if page.layout == 'home' %}
       <a href="#main" class="skip-navigation">
@@ -48,6 +50,8 @@
         </p>
       </aside>
     {% endunless %}
+
+    {% include body_append.html %}
 
   </body>
 </html>

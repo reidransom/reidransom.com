@@ -1,7 +1,7 @@
 items:
 
   - title: About
-    url: /about.html
+    url: "#about"
 
   - title: Blog
     url: /blog.html

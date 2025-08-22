@@ -4,4 +4,5 @@
 
 layout: home
 hide_footer: true
+body_class: r2home
 ---

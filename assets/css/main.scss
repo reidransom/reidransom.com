@@ -16,8 +16,7 @@ $asset_url: '{{ '/assets' | absolute_url }}';
   "menu",
   "post-list",
   "article",
-  "footnotes",
-  "search"
+  "footnotes"
 ;
 
 .skip-navigation {
@@ -65,6 +64,7 @@ a, a.post-link {
     height: 50px; /* Set a consistent height for all li elements */
     width: 10rem;
     text-align: center;
+    font-size: 1.2rem;
   }
   a {
     text-decoration: none; /* Optional: Remove underline from links */
@@ -96,12 +96,10 @@ a, a.post-link {
   background-repeat: no-repeat;
 }
 .cover-image-1 {
-  background-image: url(/assets/img/look-back-IMG_1974.jpg);
   z-index: 2;
   clip-path: inset(0 0 0 0);
 }
 .cover-image-2 {
-  background-image: url(/assets/img/look-back-moon-v1.png);
   z-index: 1;
 }
 .cover-image-content {
@@ -121,6 +119,7 @@ body {
   background-position: center;
   background-size: 100% 100%;
   background-attachment: fixed;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .flex-container {
@@ -166,4 +165,86 @@ body {
   position: absolute;
   bottom: 0;
   padding-bottom: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.parallax-section {
+  position: relative;
+  /* No fixed height; determined by contents */
+  /* Removed overflow: hidden to allow sticky to work properly */
+}
+
+.images-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-1 {
+  // background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+  background-image: url(/assets/img/look-back-IMG_1974.jpg);
+  z-index: 2;
+  clip-path: inset(0 0 0 0); /* Initially fully visible */
+  transition: clip-path 0.1s linear; /* Smooth clip-path transition */
+}
+
+.image-2 {
+  // background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308') no-repeat center center/cover;
+  background-image: url(/assets/img/look-back-moon-v1.png);
+  z-index: 1; /* Behind image-1 */
+}
+
+.spacer {
+  position: relative;
+  z-index: 3;
+  height: 100vh;
+  background: transparent;
+}
+
+/* Additional sections below parallax */
+.section {
+  position: relative;
+  min-height: 100vh;
+}
+
+body.r2home {
+  background-image: url('/assets/img/purple-haze.png');
+}
+
+.wrap-sm {
+  max-width: 30rem;
+  text-align: left;
+  margin: auto;
+}
+.pt-5 {
+  padding-top: 6rem;
+}
+h2 {
+  text-align: left;
+}
+
+a:focus {
+  outline: none;
 }

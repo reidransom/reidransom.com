@@ -1,0 +1,18 @@
+<script>
+  // Select all anchor links with a hash
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default anchor behavior
+      const targetId = this.getAttribute('href'); // Get the href value (e.g., #section1)
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        // Smooth scroll to the target element
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start' // Align the top of the element with the top of the viewport
+        });
+      }
+    });
+  });
+</script>
