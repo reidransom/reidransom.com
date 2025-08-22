@@ -1,4 +1,5 @@
-
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sharect@2.0.0/dist/sharect.min.js"></script>
 <script>
   // Select all anchor links with a hash
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -16,6 +17,6 @@
       }
     });
   });
+  hljs.highlightAll();
+  Sharect.init()
 </script>
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>

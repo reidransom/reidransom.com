@@ -14,6 +14,10 @@
           <a href="{{ item.url }}">
             <img src='/assets/img/r2ware-logo-ko.svg' alt='{{ item.title }}' class='menu-logo'>
           </a>
+        {% elsif item.title contains 'About' %}
+          <a href="{% unless page.url == '/index.html' %}/{% endunless %}#about">
+            {{ item.title }}
+          </a>
         {% elsif item.url contains 'http' %}
           <a href="{{ item.url }}">
             {{ item.title }}
