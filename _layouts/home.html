@@ -7,8 +7,17 @@ layout: default
   <div class="images-container">
     <div class="image-container image-1">
       {% include menu.html %}
+      <div style="position: relative;">
+        <div class="credit credit-top">
+          [Photo credit: Cash Ransom]
+        </div>
+      </div>
     </div>
-    <div class="image-container image-2"></div>
+    <div class="image-container image-2">
+      <div class="credit credit-bottom">
+        [Artwork credit: Maya Ransom]
+      </div>
+    </div>
   </div>
   <div class="spacer"></div>
 </div>
@@ -52,6 +61,7 @@ layout: default
       {% endif %}
     </h1>
 
+    <div class="content-p">
     {% if site.paginate and site.paginate_path %}
 
       <ul class="post-list">
@@ -87,6 +97,7 @@ layout: default
       </ul>
 
     {% endif %}
+    </div>
 
   </main>
 
