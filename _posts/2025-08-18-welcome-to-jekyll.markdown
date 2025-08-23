@@ -1,9 +1,12 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "I started a company!  ...and a blog"
 date:   2025-08-18 18:49:36 -0400
 categories: jekyll update
 ---
+
+In August 2024, a spark was reignited. After attending a conference, my entrepreneurial spirit roared back to life following a 15-year hiatus from starting a company. Over the years, countless friends asked me how to build a website, and that recurring question became the foundation of r2ware. We are a web development company dedicated to empowering small business owners by making website creation accessible and straightforward.
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:
