@@ -1,6 +1,14 @@
-$brand-color:         #3525cc;
-$primary:             #3525cc;
-$highlight:           lighten($brand-color, 35%);
+$violet:       #3525cc;
+$cyan:         #048a81;
+
+$primary:      $violet;
+$white:        #ffffff;
+$white-ish:    #abaabf;
+$dark:         #000000;
+$secondary:    #048a81;
+
+$brand-color:         $primary;
+$highlight:           $secondary;
 $text-color:          #0b0404;
 $muted-text-color:    #64644B;
 $font-family:         "EB Garamond", Garamond, "Times New Roman", serif;
