@@ -9,6 +9,21 @@
     }
     document.querySelector('.nav-toggle').addEventListener('click', toggleMenu);
 
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const menu = document.querySelector('.nav-list');
+      const toggle = document.querySelector('.nav-toggle');
+      const container = document.querySelector('.nav-container');
+
+      // Check if menu is open and click is outside nav-container and nav-toggle
+      if (menu.classList.contains('active') &&
+          !container.contains(event.target) &&
+          !toggle.contains(event.target)) {
+        menu.classList.remove('active');
+      }
+    });
+
     hljs.highlightAll();
     Sharect.init()
   })
