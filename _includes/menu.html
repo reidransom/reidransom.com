@@ -1,8 +1,10 @@
 {% assign menu = site.data.menu.items %}
 
 {% if menu %}
-  <nav class="site-navigation" role="navigation">
-    <ul>
+  <a href="#menu">Open the menu</a>
+  <nav id="menu" class="site-navigation" role="navigation">
+    <button class="js-nav-toggle" aria-label="Toggle menu">☰</button>
+    <ul class="js-nav-list">
       <li class="r2ware-logo">
         <a href="https://r2ware.dev">
           <img src='/assets/img/r2ware-logo-ko.svg' alt='r2ware'>

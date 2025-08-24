@@ -1,6 +1,15 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sharect@2.0.0/dist/sharect.min.js"></script>
 <script>
-  hljs.highlightAll();
-  Sharect.init()
+  document.addEventListener("DOMContentLoaded", () => {
+
+    function toggleMenu() {
+      const menu = document.querySelector('.nav-list');
+      menu.classList.toggle('active');
+    }
+    document.querySelector('.nav-toggle').addEventListener('click', toggleMenu);
+
+    hljs.highlightAll();
+    Sharect.init()
+  })
 </script>
