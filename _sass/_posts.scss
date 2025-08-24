@@ -1,0 +1,23 @@
+.list-unstyled {
+  list-style: none;
+}
+
+.post-title {
+  line-height: 1.25em;
+}
+
+.post > .post-cover-img {
+  max-width: 70rem;
+}
+
+.post {
+  max-width: 1200px;
+  padding-top: 0;
+}
+
+.post > h1 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+}

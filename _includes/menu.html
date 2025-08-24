@@ -3,20 +3,16 @@
 {% if menu %}
   <nav class="site-navigation" role="navigation">
     <ul>
-      <li>
-        <a href="{{ '/' | prepend: site.baseurl }}">
-          Home
+      <li class="r2ware-logo">
+        <a href="https://r2ware.dev">
+          <img src='/assets/img/r2ware-logo-ko.svg' alt='r2ware'>
         </a>
       </li>
     {% for item in menu %}
-      <li {% if page.url == item.url %}class="active"{% endif %}>
-        {% if item.title == 'r2ware' %}
+    <li class='{% if page.url == item.url %}active{% endif %} {% if item.logo %}xmenu-logo{% endif %}'>
+        {% if item.logo %}
           <a href="{{ item.url }}">
-            <img src='/assets/img/r2ware-logo-ko.svg' alt='{{ item.title }}' class='menu-logo'>
-          </a>
-        {% elsif item.title contains 'About' %}
-          <a href="{% unless page.url == '/index.html' %}/{% endunless %}#about">
-            {{ item.title }}
+            <img src='{{ item.logo }}' alt='{{ item.title }}' class='menu-logo'>
           </a>
         {% elsif item.url contains 'http' %}
           <a href="{{ item.url }}">

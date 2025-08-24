@@ -7,14 +7,12 @@ layout: default
   <div class="images-container">
     <div class="image-container image-1">
       {% include menu.html %}
-      <div style="position: relative;">
-        <div class="credit credit-top">
-          [Photo credit: Cash Ransom]
-        </div>
+      <div class="credit credit-mid">
+        [Photo credit: Cash Ransom]
       </div>
     </div>
     <div class="image-container image-2">
-      <div class="credit credit-bottom">
+      <div class="credit credit-mid" style="background-color: rgba(0, 0, 0, 0.5)">
         [Artwork credit: Maya Ransom]
       </div>
     </div>
@@ -54,8 +52,11 @@ layout: default
         </h2>
       </header>
 
-      <div class="wrap-sm pt-5">
-        <h1>Founder of r2ware</h1>
+      <div class="pt-5 wrap-sm">
+        <h1 class="">
+          <img src="/assets/img/r2ware-logo-ko.svg" alt="r2ware"
+            style="max-height: 3rem; opacity: 0.75" />
+        </h1>
         <div class="content-p">
           <p>
             The world is changing fast. AI, automation, big corporations stacking the deck… it can feel overwhelming. But here’s the truth: there has never been a better time to start your own business. The tools are here, the field is shifting, and small business owners like you have the power to move quickly and carve out your own path.
@@ -70,13 +71,9 @@ layout: default
         <h1>
           Latest posts
         </h1>
-        <div class="content-p">
-          <ul class="post-list">
-            {% for post in site.posts limit:5 %}
-              {% include post-list-item.html %}
-            {% endfor %}
-          </ul>
-        </div>
+        {% assign posts = paginator.posts | default: site.posts %}
+        {% assign posts_limit = 5 %}
+        {% include posts.html %}
       </main>
 
     </div>

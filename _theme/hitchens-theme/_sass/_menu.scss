@@ -1,12 +1,12 @@
 .site-navigation {
   margin-top: 2rem;
   padding: 0 1rem;
-  &:hover,
-  &:focus-within {
-    a {
-      opacity: .7;
-    }
-  }
+  // &:hover,
+  // &:focus-within {
+  //   a {
+  //     opacity: .7;
+  //   }
+  // }
 }
 
 .site-navigation ul {
@@ -31,8 +31,8 @@
   padding: .25em .5em;
   text-decoration: none;
   transition: opacity .125s ease-in-out;
-  &:hover,
-  &:focus {
-    opacity: 1;
-  }
+  // &:hover,
+  // &:focus {
+  //   opacity: 1;
+  // }
 }

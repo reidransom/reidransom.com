@@ -3,6 +3,7 @@ layout: post
 title:  "I started a company!  ...and a blog"
 date:   2025-08-18 18:49:36 -0400
 categories: jekyll update
+cover-img: /assets/img/started-a-company-cover.jpg
 ---
 
 In August 2024, a spark was reignited. After attending a conference, my entrepreneurial spirit roared back to life following a 15-year hiatus from starting a company. Over the years, countless friends asked me how to build a website, and that recurring question became the foundation of r2ware. We are a web development company dedicated to empowering small business owners by making website creation accessible and straightforward.

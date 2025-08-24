@@ -16,8 +16,13 @@ $asset_url: '{{ '/assets' | absolute_url }}';
   "menu",
   "post-list",
   "article",
-  "footnotes"
+  "footnotes",
+  "posts"
 ;
+
+html {
+  scroll-behavior: smooth;
+}
 
 .skip-navigation {
   display: none;
@@ -51,11 +56,16 @@ a, a.post-link {
   padding-left: 0;
   padding-right: 0;
 
-  &:hover,
-  &:focus-within {
-    a {
-      opacity: 1;
-    }
+  ul {
+    text-transform: lowercase;
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    background-color: rgba($primary, 0.25);
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5rem;
   }
 
   img {
@@ -63,34 +73,44 @@ a, a.post-link {
     margin-bottom: 0;
   }
 
-  ul {
-    list-style: none; /* Remove default bullets */
-    padding: 0; /* Remove default padding */
-  }
   li {
     display: flex; /* Make li a flex container */
     align-items: center; /* Vertically center contents */
-    height: 50px; /* Set a consistent height for all li elements */
     width: 10rem;
     text-align: center;
     font-size: 1.3rem;
     font-variant: normal;
+    &.xmenu-logo {
+      width: 15rem;
+    }
+    &.r2ware-logo {
+      img {
+        width: 6rem;
+      }
+    }
   }
   a {
-    color: $white-ish;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: $white;
     width: 100%; /* Ensure the <a> fills the <li> */
     display: flex; /* Make <a> a flex container to handle text and image */
     align-items: center; /* Vertically center text or image inside <a> */
     justify-content: center; /* Horizontally center text or image inside <a> */
-    transition: color 0.3s ease, background-color 0.3s ease;
+    opacity: 0.8;
+    transition: opacity .125s ease-in-out;
     &:hover {
       color: $white;
       text-decoration: none;
+      opacity: 1;
     }
   }
   .menu-logo {
-    height: 3rem; /* Adjust logo size to fit within li */
+    // height: 2.2rem; /* Adjust logo size to fit within li */
     width: auto; /* Maintain aspect ratio */
+    margin-top: -5px;
+  }
+  .r2ware-logo {
   }
 
 }
@@ -263,10 +283,14 @@ body {
 }
 h2 {
   text-align: left;
+  font-size: 2rem;
 }
 
 a:focus {
   outline: none;
+}
+h1 > img {
+  margin: 2rem 0;
 }
 
 .credit {
@@ -278,6 +302,10 @@ a:focus {
   border-radius: 1rem;
 }
 
+.credit-mid {
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
 .credit-top {
   top: 0;
   background-color: rgba(0, 0, 0, 0.25);
