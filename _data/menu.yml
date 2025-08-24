@@ -1,14 +1,13 @@
 items:
 
+  - title: r2ware
+    url: "https://r2ware.dev"
+
   - title: About
     url: "/#about"
 
   - title: Blog
     url: /blog.html
-
-  - title: reidransom
-    url: https://reidransom.com/
-    logo: /assets/img/reidr-ko.svg
 
   - title: GitHub
     url: https://github.com/reidransom
