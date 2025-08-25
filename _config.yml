@@ -58,3 +58,4 @@ plugins:
 #   - vendor/ruby/
 hide_credits: true
 hide_search: true
+excerpt_length: 30

@@ -21,3 +21,22 @@
   padding-left: 0;
   padding-right: 0;
 }
+
+.post-meta {
+  text-align: left;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.post-entry, .post-meta, .blog-intro {
+  font-size: 1.1rem;
+}
+.blog-intro p {
+  margin-bottom: 1rem;
+}
+
+.post-divider {
+  width: 100%;
+  border-bottom: 1px solid $white-ish;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

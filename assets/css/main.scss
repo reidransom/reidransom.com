@@ -274,12 +274,15 @@ body {
   background-image: url('/assets/img/purple-haze.png');
 }
 
-.wrap-sm {
+.wrap-sm, .wrap-md {
   max-width: 680px;
   text-align: left;
   margin: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.wrap-md {
+  max-width: 800px;
 }
 .pt-5 {
   padding-top: 6rem;
