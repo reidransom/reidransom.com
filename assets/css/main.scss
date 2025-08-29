@@ -245,7 +245,7 @@ body {
 
 .image-1 {
   // background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
-  background-image: url(/assets/img/look-back-IMG_1974.jpg);
+  background-image: url(/assets/img/look-back-reg-v3.jpg);
   z-index: 2;
   clip-path: inset(0 0 0 0); /* Initially fully visible */
   transition: clip-path 0.1s linear; /* Smooth clip-path transition */
@@ -253,7 +253,7 @@ body {
 
 .image-2 {
   // background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308') no-repeat center center/cover;
-  background-image: url(/assets/img/look-back-moon-v1.png);
+  background-image: url(/assets/img/look-back-moon-v3.png);
   z-index: 1; /* Behind image-1 */
 }
 
