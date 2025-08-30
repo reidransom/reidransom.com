@@ -149,6 +149,7 @@ a, a.post-link {
 }
 
 body {
+  background-image: url('/assets/img/purple-haze.png');
   background-color: $dark;
   color: $white-ish;
   background-repeat: no-repeat;
@@ -157,6 +158,7 @@ body {
   background-attachment: fixed;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1.5rem;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -214,10 +216,6 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .parallax-section {
   position: relative;
   /* No fixed height; determined by contents */
@@ -268,10 +266,6 @@ body {
 .section {
   position: relative;
   min-height: 100vh;
-}
-
-body {
-  background-image: url('/assets/img/purple-haze.png');
 }
 
 .wrap-sm, .wrap-md {
