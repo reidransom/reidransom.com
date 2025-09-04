@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Reid Ransom
+title: reidransom
 email: reid@reidransom.com
 description: >- # this means to ignore newlines until "baseurl:"
   I’m Reid Ransom — a full-stack engineer, founder of r2ware, and technology
@@ -36,6 +36,7 @@ github_username:  reidransom
 theme: hitchens-theme
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
