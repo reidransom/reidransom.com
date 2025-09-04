@@ -33,6 +33,9 @@ This is Reid Ransom's personal website and blog built with Jekyll using the Hitc
 
 ### Local Development
 ```bash
+# Build the site
+rp build
+
 # Serve the site locally using gojekyll
 rp serve
 

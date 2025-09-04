@@ -39,6 +39,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+favicon_svg: /assets/ico/favicon.svg
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
