@@ -56,6 +56,11 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+exclude:
+  - README.md
+  - WARP.md
+
 hide_credits: true
 hide_search: true
 excerpt_length: 30
