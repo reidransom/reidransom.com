@@ -3,6 +3,7 @@ layout: post
 title:  "OpenAI vs Grok vs Claude: CLI Code-Gen Face-off"
 date:   2025-08-23 00:00:00 -0400
 categories: dev ai
+published: false
 ---
 
 About six months ago I went deep on AI chatbots while building one at work to query our internal database. That project turned into a broader realization: these tools make short work of things I’d previously shelved.

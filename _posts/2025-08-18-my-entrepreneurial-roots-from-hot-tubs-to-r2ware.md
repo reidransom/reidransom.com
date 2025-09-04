@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My Entrepreneurial Roots: From Hot Tubs to r2ware
+title:  "My Entrepreneurial Roots: From Hot Tubs to r2ware"
 date:   2025-08-18 18:49:36 -0400
 categories: jekyll update
 cover-img: /assets/img/started-a-company-cover.jpg
