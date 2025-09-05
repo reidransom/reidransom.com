@@ -38,4 +38,4 @@ In August 2024, my entrepreneurial fire was reignited after meeting Brittani and
 
 In my life, I’ve watched one or two massive transformations unfold. AI is clearly the next one. The dot-com boom, mobile tech, and social platforms created clear winners. Today, AI offers a new frontier to redefine what’s possible, but it’s up to bold entrepreneurs and small business owners to rise to the challenge.
 
-From my early days tinkering with Red Hat to streamlining Hollywood workflows, building systems for justice reform, and now launching r2ware, my journey has been about challenging the status quo and creating solutions that make a difference. I’m excited to see where this next chapter takes me—and to help others build their own paths to success.
+From my early days tinkering with Gentoo to streamlining Hollywood workflows, building systems for justice reform, and now launching r2ware, my journey has been about challenging the status quo and creating solutions that make a difference. I’m excited to see where this next chapter takes me—and to help others build their own paths to success.
