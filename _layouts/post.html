@@ -47,8 +47,11 @@ layout: default
 
       <hr class="post-divider">
 
-      {% if site.disqus.shortname %}
-        {% include disqus-comments.html %}
+      {% if site.comentario_script %}
+      <div class="wrap-md">
+        <script defer src="{{ site.comentario_script }}"></script>
+        <comentario-comments></comentario-comments>
+      </div>
       {% endif %}
 
     </article>

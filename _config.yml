@@ -68,3 +68,4 @@ exclude:
 hide_credits: true
 hide_search: true
 excerpt_length: 30
+comentario_script: http://comments.rpdev.lan:5050/comentario.js
