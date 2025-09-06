@@ -27,7 +27,6 @@ So, I built reidransom.com, a video hosting platform that streamlined the proces
 
 * ![My Avid edit bay](/assets/blog/entrepreneurial-journey/avid-edit-bay.jpg)
 * ![The view from McCadden house](/assets/blog/entrepreneurial-journey/hollywood-and-highland.jpg)
-* ![Remember wikis!](/assets/blog/entrepreneurial-journey/reidransom.com-hosting.png)
 * ![Sundance Film Festival](/assets/blog/entrepreneurial-journey/sundance-film-festival-2011.jpg)
 
 ## Justice Reform: Building Systems at Defy Ventures

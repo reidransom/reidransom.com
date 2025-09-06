@@ -7,9 +7,7 @@ title: Blog
   <h1>
     Blog
   </h1>
-  <div class="blog-intro">
-    <p>This is my blog where I write about mostly software development and other things I care about; being a dad, being sober, running, and business development.</p>
-  </div>
+  {% include blog_about.html %}
   {% assign posts = paginator.posts | default: site.posts %}
   {% assign posts_limit = 5 %}
   {% include posts.html %}

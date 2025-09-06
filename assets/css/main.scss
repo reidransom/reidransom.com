@@ -275,9 +275,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.wrap-md {
-  max-width: 800px;
-}
 .pt-5 {
   padding-top: 6rem;
 }
@@ -315,7 +312,7 @@ h1 > img {
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-.post > *, .post > h1 {
+.wrap-md, .post > *, .post > h1 {
   max-width: 50rem;
 }
 .post {

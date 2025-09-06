@@ -17,3 +17,6 @@ items:
 
   - title: Instagram
     url: https://www.instagram.com/reidransom/
+
+  - title: RSS
+    url: /feed.xml
