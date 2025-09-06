@@ -2,7 +2,7 @@
 layout: post
 title:  "My Entrepreneurial Roots: From Hot Tubs to r2ware"
 display_title: "My Entrepreneurial Roots:<br>From Hot Tubs to r2ware"
-date:   2025-08-18 18:49:36 -0400
+date:   2025-09-05 18:49:36 -0400
 categories: jekyll update
 cover-img: /assets/blog/entrepreneurial-journey/r2ware-opengraph-art.png
 ---
