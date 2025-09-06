@@ -1,6 +1,67 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sharect@2.0.0/dist/sharect.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"></script>
 <script>
+  function convertImageListsToGalleries() {
+    // Find all ul elements in post content
+    const postContent = document.querySelector('.post-content');
+    if (!postContent) return;
+    
+    const lists = postContent.querySelectorAll('ul');
+    
+    lists.forEach((list, listIndex) => {
+      const listItems = list.querySelectorAll('li');
+      const imageItems = [];
+      
+      // Check if all list items contain only images
+      let allItemsAreImages = true;
+      listItems.forEach(li => {
+        const img = li.querySelector('img');
+        const textContent = li.textContent.replace(li.querySelector('img')?.alt || '', '').trim();
+        
+        if (!img || textContent.length > 0) {
+          allItemsAreImages = false;
+        } else {
+          imageItems.push({ li, img });
+        }
+      });
+      
+      // Convert to gallery if all items are images and we have more than one
+      if (allItemsAreImages && imageItems.length > 0) {
+        const gallery = document.createElement('div');
+        gallery.className = 'image-gallery';
+        gallery.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;';
+        
+        imageItems.forEach((item, index) => {
+          const { img } = item;
+          const galleryItem = document.createElement('a');
+          galleryItem.href = img.src;
+          galleryItem.className = 'gallery-item';
+          galleryItem.setAttribute('data-gallery', `gallery-${listIndex}`);
+          galleryItem.style.cssText = 'display: block; border-radius: 8px; overflow: hidden; transition: transform 0.2s ease;';
+          
+          // Create thumbnail image
+          const thumbImg = img.cloneNode(true);
+          thumbImg.style.cssText = 'width: 100%; height: 200px; object-fit: cover; display: block;';
+          
+          galleryItem.appendChild(thumbImg);
+          gallery.appendChild(galleryItem);
+          
+          // Add hover effect
+          galleryItem.addEventListener('mouseenter', () => {
+            galleryItem.style.transform = 'scale(1.05)';
+          });
+          galleryItem.addEventListener('mouseleave', () => {
+            galleryItem.style.transform = 'scale(1)';
+          });
+        });
+        
+        // Replace the original list with the gallery
+        list.parentNode.replaceChild(gallery, list);
+      }
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
 
     function toggleMenu() {
@@ -25,6 +86,17 @@
     });
 
     hljs.highlightAll();
-    Sharect.init()
+    Sharect.init();
+    
+    // Convert consecutive image bullet points to GLightbox galleries
+    convertImageListsToGalleries();
+    
+    // Initialize GLightbox for galleries
+    GLightbox({
+      selector: '.gallery-item',
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: false
+    });
   })
 </script>
